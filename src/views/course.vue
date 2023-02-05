@@ -1,13 +1,16 @@
 <script setup>
-import { useCourse } from '../stores/course';
+import { useCourse } from "../stores/course";
 const { course } = useCourse();
 </script>
 <template>
   <div class="container mt-5 text-center">
-    <div class="row mt-2" style="font-size: 22px; color:white;">
+    <div class="row mt-2" style="font-size: 22px; color: white">
       <div class="col text-start">รายวิชา</div>
     </div>
-    <div class="row mt-5" style="font-size: 22px;">
+    <div
+      class="row mt-5"
+      style="font-size: 22px; background-color: darkgreen; color: aliceblue"
+    >
       <div class="col">
         <div>รหัสวิชา</div>
       </div>
@@ -23,7 +26,7 @@ const { course } = useCourse();
         {{ course[n - 1].code }}
       </div>
       <div class="col" v-if="course && course[n - 1]">
-        {{ course[n - 1].nameTh }}<br>
+        {{ course[n - 1].nameTh }}<br />
         {{ course[n - 1].nameEg }}
       </div>
       <div class="col" v-if="course && course[n - 1]">
@@ -32,4 +35,3 @@ const { course } = useCourse();
     </div>
   </div>
 </template>
-
